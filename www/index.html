@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="blog-container">
+    <div class="img-container">
+        <img src="img/leaves.png" alt="Leaf Icon" class="header-icon">
+    </div>
+    <h1>My Blog</h1>
+    <form id="post-form">
+        <label for="title">Blog Title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="description">Blog Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <button id="capture-image" type="button">Capture Image</button>
+        <img id="image-preview" alt="Image Preview" style="display: none; max-width: 100%; margin-top: 10px;" src="img/leaves.png">
+        <button type="submit">Submit Blog Post</button>
+    </form>
+    <div class="fetch-data-container">
+        <button id="fetch-data" type="button">Fetch Blog Posts from JSONBin</button>
+        <h2>Blog Posts</h2>
+    </div>
+    <ul id="output">
+        <li>No blog posts yet!</li>
+    </ul>
+</div>
+<script src="js/index.js" defer type="module"></script>
+<footer>
+    <p>© 2024 My Blog. All rights reserved.</p>
+</footer>
+</body>
+</html>
